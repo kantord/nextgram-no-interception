@@ -2,7 +2,6 @@
 
 import { type ElementRef, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { createPortal } from 'react-dom';
 
 export function Modal({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -15,7 +14,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
   }, []);
 
   function onDismiss() {
-    router.back();
+    router.push('/asdf/')
   }
 
   return  (
